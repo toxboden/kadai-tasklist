@@ -41,9 +41,6 @@ public class UpdateServlet extends HttpServlet {
             Task m = em.find(Task.class, (Integer)(request.getSession().getAttribute("task_id")));
 
             // フォームの内容を各フィールドに上書き
-            String title = request.getParameter("title");
-            m.setTitle(title);
-
             String content = request.getParameter("content");
             m.setContent(content);
 
